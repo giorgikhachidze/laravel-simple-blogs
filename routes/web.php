@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('blogs.index');
 });
+
+Route::get('/blogs/index', 'BlogController@index')->name('blogs.index');
+Route::get('/blogs/create', 'BlogController@create')->name('blogs.create');
+Route::post('/blogs/store', 'BlogController@store')->name('blogs.store');
+Route::post('/blogs/delete', 'BlogController@destroy')->name('blogs.delete');
