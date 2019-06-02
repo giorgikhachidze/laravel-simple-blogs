@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="bg-dark text-left p-2 mb-3 rounded" style="color: #17e414;font-size: .85rem">
-        "select `id`, `title`, `description`, `created_at` from `blogs` where `is_publish` = 1 and `deleted_at` is null order by `created_at` asc"
+        "select `id`, `title`, `description`, `created_at` from `blogs` where `blogs`.`deleted_at` is not null"
     </div>
 
     <div class="card">
@@ -25,7 +25,7 @@
                         <td>{{ $post->description }}</td>
                         <td>{{ $post->created_at }}</td>
                         <td class="text-right">
-                            <a href="{{ route('blogs.delete', $post->id) }}" class="btn btn-danger btn-sm">წაშლა</a>
+                            <a href="{{ route('blogs.restore', $post->id) }}" class="btn btn-success btn-sm">აღდგენა</a>
                         </td>
                     </tr>
                 @endforeach

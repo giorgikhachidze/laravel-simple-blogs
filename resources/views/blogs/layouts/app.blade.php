@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Donations.ge - Dashboard</title>
+    <title>Laravel blogs</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -32,6 +32,15 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/blogs/create">დამატება</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs/date">ამ თვის პოსტები</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs/in">პოსტები 1,5,19</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs/trash">წაშლილები</a>
                 </li>
             </ul>
         </div>
